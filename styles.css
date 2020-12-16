@@ -1,0 +1,220 @@
+* {
+    font-family: Roboto, sans-serif;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+nav {
+    background-color: #4c61cc;}
+    nav .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;}
+        nav .container img {
+            width: 4.5em;
+            padding: .5em 0.2em; }
+            nav .container ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;}
+                nav .container ul li {
+                    font-size: 14px;
+                    float: left;
+                    border-right:1px solid #bbb;}
+                    nav .container ul li:last-child {
+                        border-right: none;}
+                        nav .container ul li a {
+                            display: block;
+                            color: #FFFFFF;
+                            text-align: center;
+                            padding: 7px 8px;
+                            text-decoration: none;}
+                            nav .container ul li a:hover:not(.active) {
+                                background-color: #FFFFFF;
+                                color: #1b3093}
+                                nav .container ul li .active {
+                                    font-size: 18px;
+                                    font-weight: bold;}           
+
+.page-header {
+    color: #4c61cc;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.hero-image {
+    display: block;
+    max-height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+}
+
+.main-container img {
+    display: block;
+    max-height: 500px;
+    border-radius: 25px;
+    margin-left: auto;
+    margin-right: auto;}
+    .main-container p, h2 {
+        display: block;
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;}
+        .main-container ol {
+            display: block;
+            width: 272px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: bold;}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;}
+    .flex-container img {
+        max-height: 250px;
+        border-radius: 25px
+    }
+
+.flex-item-left {
+    padding: 10px;
+    flex: 50%;
+    align-self: center;
+}
+
+.flex-item-right {
+    padding: 10px;
+    flex: 50%;
+    align-self: center;
+}
+
+/* Risk Management */
+.risk-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;}
+    .risk-flex-container img {
+        max-height: 200px;
+        border-radius: 25px}
+        .risk-flex-container p {
+            width: 600px;}
+
+.risk-flex-item-left {
+    padding: 10px;
+    align-self: center;
+}
+
+.risk-flex-item-right {
+    padding: 10px;
+    align-self: center;
+}
+
+/* kloud offerings */
+.card {
+    box-shadow: 0 2px 4px 0 #4c61cc;
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 20px;
+    max-width: 250px;} 
+    .card img {
+        border-radius: 15px;
+        max-height: 75px;}
+
+/* Estmate Calculator */
+.input-form {
+    max-width: 600px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+input[type=text], input[type=number], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+button[type=button] {
+    background-color: #4c61cc;
+    color: #ffffff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type=button]:hover {
+    background-color: #374baf;
+}
+
+.col-40 {
+    float: left;
+    width: 40%;
+    margin-top: 6px;
+}
+.col-55 {
+    float: left;
+    width: 55%;
+    margin-top: 6px;
+}
+
+.col-30 {
+    float: left;
+    width: 30%;
+    margin-top: 6px;
+}
+
+.col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#kloud {
+    text-decoration: none;
+    color: #4c61cc;
+    font-weight: bold;
+}
+
+/* Citations */
+
+.citations ul {
+    display: block;
+    width: 850px;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Footer */
+footer .container {
+    display: flex;
+    background-color: #4c61cc;
+    color: #FFFFFF;
+    align-items: center;
+    align-content:end;
+    justify-content: center;}
+    footer .container a img {
+        width: 4.5em;
+        padding: 10px;}

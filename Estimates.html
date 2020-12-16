@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Kloud Komputing</title>
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet'>
+    <link rel='stylesheet' type='text/css' href='styles.css'>
+    <script type="text/javascript" src="Estimate.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <!-- Navigation -->
+            <nav>
+                <div class="container">
+                    <a href="index.html">
+                        <img src="img/KloudKomputingLogo.png"  width=95 height=65>
+                    </a>
+                    <ul>
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="Kloud.html">THE KLOUD</a></li>
+                        <li><a href="Risks.html">KLOUD RISKS</a></li>
+                        <li><a href="Planning.html">KLOUD PLANNING</a></li>
+                        <li><a class="active" href="Estimates.html">KLOUD ESTIMATES</a></li>
+                        <li><a href="Citations.html">CITATIONS</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <h1 class="page-header">Kloud Estimates</h1>
+        
+        <img class="hero-image" alt="Kloud Estimates" src="img/CloudEstimates.jpg" title="Kloud Estimates"/>
+        
+        <br>
+
+        <div class="main-container">
+            <p>
+                The current cost for ACME, Inc., to host its on-prem solution is approximately 
+                <strong><em>$117,000</em></strong>
+                annually. Below is the cost breakdown for annual costs utilizing the Kloud, 
+                based on figures provided by ACME Engineering.  
+            </p>
+            <img id="estimate-border" src="img/AcmeIncSolution.png" alt="ACME">
+            <br>
+            <h2>Create Your Own Estimate</h2>
+        </div>
+
+        <br>
+        
+        <!-- Estimate -->
+        <div class="input-form">
+            <form> 
+                <!--Description  -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="description">Description For Your Estimate</label>
+                    </div>
+                    <div class="col-55" >
+                        <input 
+                            type="text" 
+                            id="description"
+                            name="description"
+                            placeholder="Description"
+                        >
+                    </div>
+                </div>
+              
+                <!--Region  -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="region">Region</label>
+                    </div>
+                    <div class="col-55" >
+                        <select id="region">
+                            <option selected>Choose...</option>
+                            <option value=".5">NorthWest</option>
+                            <option value=".6">West</option>
+                            <option value=".6">South</option>
+                            <option value=".6">NorthEast</option>
+                            <option value=".5">SouthEast</option>
+                        </select>
+                    </div>
+                </div>
+              
+                <!-- Operating System -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="operatingSystem">Operating System</label>
+                    </div>
+                    <div class="col-55" >
+                        <select id="operatingSystem">
+                            <option selected>Choose...</option>
+                            <option value="3">Windows</option>
+                            <option value="1">RHEL</option>
+                            <option value="2">Linux (Non-RHEL)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Requirements for each Instance  -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="requirements1">Requirements</label>
+                    </div>
+                    <div class="col-30" >
+                        <select id="requirements1">
+                            <option selected>Choose...</option>
+                            <option value="1">CPUs</option>
+                            <option value="1.5">GPUs</option>
+                            <option value="1.75">ECUs</option>
+                        </select>
+                    </div>
+                    <div class="col-25" >
+                        <input 
+                            type="number" 
+                            id="requirementsNumber1"
+                            name="requirementsNumber1"
+                            placeholder="4"
+                        >
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-40"></div>
+                    <div class="col-30" >
+                        <select id="requirements2">
+                            <option selected>Choose...</option>
+                            <option value="1.5">Memory (GIB)</option>
+                            <option value="1.75">GPUs</option>
+                            <option value="2">ECUs</option>
+                        </select>
+                    </div>
+                    <div class="col-25" >
+                        <input 
+                            type="number" 
+                            id="requirementsNumber2"
+                            name="requirementsNumber2"
+                            placeholder="16"
+                        >
+                    </div>
+                </div>
+
+                <!--Quantity of Instances  -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="quantity">Quanity of Instances</label>
+                    </div>
+                    <div class="col-55" >
+                        <input 
+                            type="number" 
+                            id="quantity"
+                            name="quantity"
+                            placeholder="1"
+                        >
+                    </div>
+                </div>
+  
+                <!--Storage Per Instance  -->
+                <div class="row">
+                    <div class="col-40">
+                        <label for="storage">Storage Per Instance</label>
+                    </div>
+                    <div class="col-30" >
+                        <input 
+                            type="number" 
+                            id="storage"
+                            name="storage"
+                            placeholder="100"
+                        >
+                    </div>
+                    <div class="col-25" >
+                        <select id="storageType">
+                            <option selected>Choose...</option>
+                            <option value=".75">MB</option>
+                            <option value="1">GB</option>
+                            <option value="1.5">TB</option>                        
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <button type="button" class="button" onclick="calculateEstimate(
+                    document.getElementById('description').value,
+                    document.getElementById('region').value,
+                    document.getElementById('operatingSystem').value,
+                    document.getElementById('requirements1').value,
+                    document.getElementById('requirementsNumber1').value,
+                    document.getElementById('requirements2').value,
+                    document.getElementById('requirementsNumber2').value,
+                    document.getElementById('quantity').value,
+                    document.getElementById('storage').value,
+                    document.getElementById('storageType').value)">Estimate</button>
+                
+                <p id="estimate" class="output"></p>
+            </form>
+        </div>
+        
+        <br>
+
+        <footer>
+            <div class="container">
+                <a href="index.html">
+                    <img src="img/KloudKomputingLogo.png"  width=95 height=65>
+                </a>
+                <p>
+                    Kloud Komputing, Inc.<br>
+                    555-867-5309<br>
+                    www.kloudkomputing.com<br>
+                </p>
+            </div>
+        </footer>
+    </main>
+</body>
+
+</html>
